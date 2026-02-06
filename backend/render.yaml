@@ -1,0 +1,36 @@
+{
+  "$schema": "https://render.com/schema/v1",
+  "services": [
+    {
+      "type": "web",
+      "name": "learning-platform-backend",
+      "env": "node",
+      "region": "oregon",
+      "plan": "free",
+      "buildCommand": "npm install",
+      "startCommand": "npm start",
+      "envVars": [
+        {
+          "key": "NODE_ENV",
+          "value": "production"
+        },
+        {
+          "key": "PORT",
+          "generateValue": true
+        },
+        {
+          "key": "CLERK_SECRET_KEY",
+          "sync": false
+        },
+        {
+          "key": "DATABASE_URL",
+          "sync": false
+        },
+        {
+          "key": "FRONTEND_URL",
+          "sync": false
+        }
+      ]
+    }
+  ]
+}
